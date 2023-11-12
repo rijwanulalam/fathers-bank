@@ -14,22 +14,27 @@
         <div class="grid grid-cols-3 gap-5 mb-10">
             <div class="bg-green-500 p-10 rounded-md">
                 <h3 class="text-2xl font-semibold mb-2">Deposit</h3>
-                <h5 class="text-5xl font-medium">$00</h5>
+                <h5 class="text-5xl font-medium">$<span id="deposit-money">00</span></h5>
             </div>
             <div class="bg-yellow-500 p-10 rounded-md">
-                <h3 class="text-2xl font-semibold mb-2">Deposit</h3>
-                <h5 class="text-5xl font-medium">$00</h5>
+                <h3 class="text-2xl font-semibold mb-2">Withdraw</h3>
+                <h5 class="text-5xl font-medium">$<span id="withdraw-money">00</span></h5>
             </div>
             <div class="bg-sky-500 p-10 rounded-md">
-                <h3 class="text-2xl font-semibold mb-2">Deposit</h3>
-                <h5 class="text-5xl font-medium">$1240</h5>
+                <h3 class="text-2xl font-semibold mb-2">Balance</h3>
+                <h5 class="text-5xl font-medium">$<span id="balance-money">1240</span></h5>
             </div>
         </div>
         <div class="grid grid-cols-2 gap-10 mt-20">
-            <div class="bg-rose-500 p-10">
+            <div class="bg-rose-500 p-10 rounded-md">
                 <h3 class="text-4xl">Please Deposit</h3>
-                <input class="block my-2 text-black p-2 rounded-md" type="text" name="" id="" placeholder="deposit your money">
-                <button class="bg-white text-black px-5 py-2 font-medium rounded-md" >Deposit</button>
+                <input class="block my-2 text-black p-2 rounded-md w-9/12" type="text" name="" id="" placeholder="deposit your money">
+                <button class="bg-white text-black px-5 py-2 font-bold rounded-md" >Deposit</button>
+            </div>
+            <div class="bg-red-500 p-10 rounded-md">
+                <h3 class="text-4xl">Please Withdraw</h3>
+                <input class="block my-2 text-black p-2 rounded-md w-9/12" type="text" name="" id="" placeholder="withdraw your money">
+                <button class="bg-white text-black px-5 py-2 font-bold rounded-md" >Withdraw</button>
             </div>
         </div>
     </main>

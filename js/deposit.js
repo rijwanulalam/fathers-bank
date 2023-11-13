@@ -7,18 +7,27 @@
 document.getElementById("deposit-btn").addEventListener("click", function(){
     // withdraw input field
     const depositInputField = document.getElementById("input-deposit");
-    const newDeposit = depositInputField.value;
+    const newDeposit = parseFloat(depositInputField.value);
+
+    depositInputField.value = "";
+    if(isNaN(newDeposit)){
+        alert("please input number");
+        return;
+    }
+
     // adding with deposit balance
     const depositMoney = document.getElementById("deposit-money");
-    const depositBalance = depositMoney.innerText;
+    const currentDepositMoney = parseFloat(depositMoney.innerText);
 
-    depositMoney.innerText = parseFloat(depositBalance) + parseFloat(newDeposit);
+    depositMoney.innerText = currentDepositMoney + newDeposit;
 
 // balance add
-    const balanceMoney = document.getElementById("balance-money");
-    const balance = balanceMoney.innerText;
+    const currentBalanceMoney = document.getElementById("balance-money");
+    const balance = parseFloat(currentBalanceMoney.innerText);
 
-    balanceMoney.innerText = parseFloat(balance)+ parseFloat(newDeposit);
+    currentBalanceMoney.innerText = balance + newDeposit;
+
+    
     
     
 })
